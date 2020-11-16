@@ -1,0 +1,38 @@
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tweet-textarea:focus, input:focus{
+  outline: none;
+}
+
+.tweet-textarea {
+  display: flex;
+  width: 100%;
+  border: none;
+  border-bottom: #3b2c13 4px solid;
+  background-color: #f4f1ec;
+  /* line-height: 15px; */
+}
+
+.button_counter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  outline: none;
+  resize: none;
+}
+
+.button {
+  display: flex;
+  color: #ffffff;
+  background-color: #17520d;
+  border: none;
+}
+
+.counter {
+  display: flex;
+
+}

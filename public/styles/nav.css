@@ -5,14 +5,26 @@
   background-color: #17520d;
   color: #ffffff;
   justify-content: space-between;
+  width: 100%;
+  position: fixed; 
+  top: 0;
+  
+}
+
+.rightnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
 }
 
 .navspanleft {
   display: flex;
-  margin: 1.5em
+  margin: 1.5em;
 }
 /* no space betweem words && need to add little arrows*/
 .navspanright {
   /* display: flex; */
-  margin: 1.5em;
+  margin: 0.2em;
 }

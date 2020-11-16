@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2b200;
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+  color: white;
+}

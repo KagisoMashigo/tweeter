@@ -38,5 +38,6 @@ app.listen(PORT, () => {
 
 /*
 NOTES:
-- Use moment lib for dates
+- Use moment js lib for dates / use cdn js and link to head section or download
+- use font awesome for icons, use cdn or dl
 */

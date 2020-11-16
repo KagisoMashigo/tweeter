@@ -8,7 +8,7 @@
   outline: none;
 }
 
-.tweet-textarea {
+.textarea {
   display: flex;
   width: 100%;
   border: none;

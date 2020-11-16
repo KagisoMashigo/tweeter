@@ -39,4 +39,5 @@ app.listen(PORT, () => {
 NOTES:
 - Use moment js lib for dates / use cdn js and link to head section or download
 - use font awesome for icons, use cdn or dl
+- CHAR COUNTER CSS IN CSS AND NOT JS HOW?!
 */

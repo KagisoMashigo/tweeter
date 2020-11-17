@@ -10,15 +10,15 @@ const createTweetElement = function(tweet) {
   let $tweet = `
   <article id="tweet">
     <header class="tweet-header"> 
-      <img src="${tweet.user.avatars}">
-      <h2 class="username">${tweet.user.name}</h2>
-      <span class="handle">${tweet.user.handle}</span>
+      <img src="${escape(tweet.user.avatars)}">
+      <h2 class="username">${escape(tweet.user.name)}</h2>
+      <span class="handle">${escape(tweet.user.handle)}</span>
     </header>
     <section>
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
     </section>
     <footer class="tweet-footer">
-      <p2>${tweet.content.created_at}</p2>
+      <p2>${dateCheck(tweet.created_at)} day(s) ago.</p2>
       <span>
       <i class="fab fa-facebook-square"></i>
       </span>
@@ -56,6 +56,23 @@ const loadTweets = () => {
     renderTweets(data);
   }).catch(err => console.log(err));
 };
+
+// Function used to ensure scripts cannot be run bu users
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+// Formats date on new tweets
+const dateCheck = (timeStamp) => {
+  const date = new Date() - timeStamp;
+  let timeInSecs = Math.floor(date / 1000);
+  let timeInMins = Math.floor(timeInSecs / 60);
+  let timeInHours = Math.floor(timeInMins / 60);
+  let timeInDays = Math.floor(timeInHours / 24);
+  return timeInDays;
+}
 
 $(document).ready(() => {
   postTweets()

@@ -1,6 +1,7 @@
 .tweet-body {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #tweet:hover {
@@ -16,6 +17,7 @@
   align-items: center;
   width: 95%;
   padding: 10px;
+  margin: 15px;
 }
 
 .tweet-header {

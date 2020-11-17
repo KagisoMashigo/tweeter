@@ -31,16 +31,17 @@ const createTweetElement = function(tweet) {
 // Posts tweets using AJAX
 const postTweets = () => {
   $(".tweet-form").submit(function(event) {
-  console.log("tweet sent off")
+  // console.log("tweet sent off")
   event.preventDefault();
     $.ajax({
       url: "/tweets",
       method: "POST",
       data: $(this).serialize()
     }).then(() => {
+      $('.tweet-form').children('textarea').val('')
       loadTweets();
     }).catch(err => console.log(err));
-    console.log("success")
+    // console.log("success")
   });
 };
 

@@ -1,10 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// Fake data taken from initial-tweets.json
 const data = [
   {
     "user": {
@@ -31,18 +24,14 @@ const data = [
 ]
 
 const renderTweets = function(tweets) {
-// loops through tweets
 // $('.tweet-body').empty();
   for (const tweet of tweets) {
    const value = createTweetElement(tweet);
    $('.tweet-body').prepend(value);
   }
 }
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
 
 const createTweetElement = function(tweet) {
-  console.log(tweet.user.name)
   let $tweet = `
   <article id="tweet">
     <header class="tweet-header"> 
@@ -64,7 +53,32 @@ const createTweetElement = function(tweet) {
   return $tweet;
 }
 
+// Posts tweets using AJAX
+const postTweets = () => {
+  $(".tweet-form").submit(function(event) {
+  console.log("tweet sent off")
+  event.preventDefault();
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $(this).serialize()
+    }).catch(err => console.log(err));
+    console.log("success")
+  });
+};
+
+// Loads tweets suing AJAX
+// const loadTweets = () => {
+//   console.log("Tweet fetched");
+//   $.ajax({
+//     url: "/tweets",
+//     method: "GET"
+//   }).then((data) => {
+//     renderTweets(data);
+//   }).catch(err => console.log(err));
+// };
+
 $(document).ready(() => {
   renderTweets(data);
- 
+  postTweets()
 });

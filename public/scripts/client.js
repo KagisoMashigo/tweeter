@@ -1,10 +1,10 @@
 const renderTweets = function(tweets) {
-$('.tweet-body').empty();
+  $('.tweet-body').empty();
   for (const tweet of tweets) {
-   const value = createTweetElement(tweet);
-   $('.tweet-body').prepend(value);
+    const value = createTweetElement(tweet);
+    $('.tweet-body').prepend(value);
   }
-}
+};
 
 const createTweetElement = function(tweet) {
   let $tweet = `
@@ -23,25 +23,28 @@ const createTweetElement = function(tweet) {
       <i class="fab fa-facebook-square"></i>
       </span>
     </footer>
-  </article>`
-
+  </article>`;
   return $tweet;
-}
+};
 
 // Posts tweets using AJAX
 const postTweets = () => {
   $(".tweet-form").submit(function(event) {
-  // console.log("tweet sent off")
-  event.preventDefault();
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: $(this).serialize()
-    }).then(() => {
-      $('.tweet-form').children('textarea').val('')
-      loadTweets();
-    }).catch(err => console.log(err));
-    // console.log("success")
+    event.preventDefault();
+    if ($('.textarea').val().length >= 140) {
+      checkSectionErrors('.errors', `<strong>⚠️ You've got too much character, friend. Reduce your character count ⚠️</strong>`, 2500, 'slow');
+    } else if ($('.textarea').val().length === 0) {
+      checkSectionErrors('.errors', `<strong>⚠️ You could use some more character. Add to your character count ⚠️</strong>`, 2500, 'slow');
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: $(this).serialize()
+      }).then(() => {
+        $('.tweet-form').children('textarea').val('');
+        loadTweets();
+      }).catch(err => console.log(err));
+    }
   });
 };
 
@@ -72,10 +75,17 @@ const dateCheck = (timeStamp) => {
   let timeInHours = Math.floor(timeInMins / 60);
   let timeInDays = Math.floor(timeInHours / 24);
   return timeInDays;
-}
+};
+
+// Function made to check errors on form submission
+const checkSectionErrors = (section, html, delay, slideSpeed) => {
+  $(section).empty();
+  const output = $(section).append(html).slideDown(slideSpeed).delay(delay).slideUp(slideSpeed);
+  return output;
+};
 
 $(document).ready(() => {
-  postTweets()
-  loadTweets()
+  postTweets();
+  loadTweets();
 });
 console.log("Stock tweets fetched");

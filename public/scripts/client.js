@@ -32,26 +32,35 @@ const data = [
 
 const renderTweets = function(tweets) {
 // loops through tweets
+// $('.tweet-body').empty();
+  for (const tweet of tweets) {
+   const value = createTweetElement(tweet);
+   $('.tweet-body').prepend(value);
+  }
+}
 // calls createTweetElement for each tweet
 // takes return value and appends it to the tweets container
-}
 
 const createTweetElement = function(tweet) {
-  let $tweet = <article id="tweet">
+  console.log(tweet.user.name)
+  let $tweet = `
+  <article id="tweet">
     <header class="tweet-header"> 
-      <img>img</img>
-      <h2 class="username">name</h2>
-      <span class="handle">handle</span>
+      <img src="${tweet.user.avatars}">
+      <h2 class="username">${tweet.user.name}</h2>
+      <span class="handle">${tweet.user.handle}</span>
     </header>
     <section>
-      <p>hello world</p>
+      <p>${tweet.content.text}</p>
     </section>
     <footer class="tweet-footer">
-      <p2>date</p2>
-      <span>socials</span>
+      <p2>${tweet.content.created_at}</p2>
+      <span>
+      <i class="fab fa-facebook-square"></i>
+      </span>
     </footer>
-    </article>
-    // ...
+  </article>`
+
   return $tweet;
 }
 

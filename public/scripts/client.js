@@ -6,15 +6,6 @@ const renderTweets = function(tweets) {
   }
 };
 
-const toggleForm = () => {
-  const $arrow = $('.fas fa-arrow-down');
-  const toggle = $(section).append(html).slideDown(slideSpeed);
-  $arrow.on('click', function () {
-    console.log('Button clicked');
-    return toggle;
-  })
-}
-
 const createTweetElement = function(tweet) {
   let $tweet = `
   <article id="tweet">
@@ -95,5 +86,4 @@ const checkSectionErrors = (section, html, delay, slideSpeed) => {
 $(document).ready(() => {
   postTweets();
   loadTweets();
-  toggleForm()
 });

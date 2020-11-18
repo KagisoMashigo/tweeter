@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px) {
   .nav {
-    background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png")
+    background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
   }
   body {
 
@@ -21,7 +21,7 @@
 @media only screen and (min-width: 1024px) {
   .nav {
     background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
-    background-color: #000000
+    background-color: #17520d
 
   }
 

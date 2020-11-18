@@ -10,7 +10,6 @@ const toggleForm = () => {
   const $arrow = $('#togglearrow');
   $arrow.on('click', function () {
     const toggle = $('.tweet-form').slideDown(750);
-    console.log('Button clicked');
     return toggle;
   })
 }

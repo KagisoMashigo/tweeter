@@ -9,8 +9,12 @@ const renderTweets = function(tweets) {
 const toggleForm = () => {
   const $arrow = $('#togglearrow');
   $arrow.on('click', function () {
-    const toggle = $('.tweet-form').slideDown(750);
-    return toggle;
+    const $newTweet = $('.tweet-form');
+    if ($newTweet.is(":visible")) {
+      $newTweet.slideUp(750); // can use "fast" or "slow" instead of numbers, default is 400
+    } else {
+      $newTweet.slideDown(750);
+    }
   })
 }
 

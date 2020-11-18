@@ -9,7 +9,7 @@ const renderTweets = function(tweets) {
 const toggleForm = () => {
   const $arrow = $('#togglearrow');
   $arrow.on('click', function () {
-    const toggle = $('.tweet-form').slideDown(2000);
+    const toggle = $('.tweet-form').slideDown(750);
     console.log('Button clicked');
     return toggle;
   })
@@ -95,5 +95,5 @@ const checkSectionErrors = (section, html, delay, slideSpeed) => {
 $(document).ready(() => {
   postTweets();
   loadTweets();
-  toggleForm()
+  toggleForm();
 });

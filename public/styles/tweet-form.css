@@ -1,5 +1,6 @@
 .tweet-form {
   display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   margin: 20px;
@@ -27,12 +28,18 @@
   outline: none;
 }
 
+.button:hover {
+  border: 4px outset #17520d;
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+}
+
 .button {
   display: flex;
   color: #ffffff;
   background-color: #17520d;
   border: none;
   background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+  cursor: pointer;
 
 }
 

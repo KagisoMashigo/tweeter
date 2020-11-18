@@ -1,6 +1,6 @@
 .nav {
   display: flex;
-  height: 120px;
+  height: 100px;
   width: 100%;
   background-color: #17520d;
   color: #ffffff;
@@ -10,6 +10,15 @@
   top: 0;
   background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
   
+}
+
+#togglearrow {
+  color: orangered;
+}
+
+#togglearrow:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .rightnav {

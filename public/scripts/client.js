@@ -6,6 +6,18 @@ const renderTweets = function(tweets) {
   }
 };
 
+const toggleForm = () => {
+  const $arrow = $('#togglearrow');
+  $arrow.on('click', function () {
+    const $newTweet = $('.tweet-form');
+    if ($newTweet.is(":visible")) {
+      $newTweet.slideUp(750); // can use "fast" or "slow" instead of numbers, default is 400
+    } else {
+      $newTweet.slideDown(750);
+    }
+  })
+}
+
 const createTweetElement = function(tweet) {
   let $tweet = `
   <article id="tweet">
@@ -86,4 +98,5 @@ const checkSectionErrors = (section, html, delay, slideSpeed) => {
 $(document).ready(() => {
   postTweets();
   loadTweets();
+  toggleForm();
 });

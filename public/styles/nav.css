@@ -11,8 +11,13 @@
   
 }
 
+#togglearrow {
+  color: orangered;
+}
+
 #togglearrow:hover {
-  cursor: grabbing;
+  cursor: pointer;
+  color: white;
 }
 
 .rightnav {

@@ -7,9 +7,9 @@ const renderTweets = function(tweets) {
 };
 
 const toggleForm = () => {
-  const $arrow = $('.fas fa-arrow-down');
-  const toggle = $(section).append(html).slideDown(slideSpeed);
+  const $arrow = $('#togglearrow');
   $arrow.on('click', function () {
+    const toggle = $('.tweet-form').slideDown(2000);
     console.log('Button clicked');
     return toggle;
   })

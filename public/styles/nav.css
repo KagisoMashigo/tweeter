@@ -11,6 +11,10 @@
   
 }
 
+#togglearrow:hover {
+  cursor: grabbing;
+}
+
 .rightnav {
   display: flex;
   flex-direction: column;

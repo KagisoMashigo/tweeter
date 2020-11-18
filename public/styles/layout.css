@@ -22,6 +22,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   flex-direction: column;
   align-items: center;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }
 
 /*

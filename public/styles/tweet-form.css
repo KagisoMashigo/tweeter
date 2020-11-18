@@ -31,6 +31,8 @@
   color: #ffffff;
   background-color: #17520d;
   border: none;
+  cursor: pointer;
+
 }
 
 .counter {

@@ -1,23 +1,17 @@
-const renderTweets = function(tweets) {
-  $('.tweet-body').empty();
-  for (const tweet of tweets) {
-    const value = createTweetElement(tweet);
-    $('.tweet-body').prepend(value);
-  }
-};
-
+// This is responsible for toggling the form using the arrow on the page
 const toggleForm = () => {
   const $arrow = $('#togglearrow');
-  $arrow.on('click', function () {
+  $arrow.on('click', function() {
     const $newTweet = $('.tweet-form');
     if ($newTweet.is(":visible")) {
-      $newTweet.slideUp(750); // can use "fast" or "slow" instead of numbers, default is 400
+      $newTweet.slideUp(750);
     } else {
       $newTweet.slideDown(750);
     }
-  })
-}
+  });
+};
 
+// Creates tweet by injecting html into page
 const createTweetElement = function(tweet) {
   let $tweet = `
   <article id="tweet">
@@ -30,13 +24,22 @@ const createTweetElement = function(tweet) {
       <p>${escape(tweet.content.text)}</p>
     </section>
     <footer class="tweet-footer">
-      <p2>${dateCheck(tweet.created_at)} day(s) ago.</p2>
+      <p2>${moment(tweet.created_at).fromNow()}</p2>
       <span>
       <i class="fab fa-facebook-square"></i>
       </span>
     </footer>
   </article>`;
   return $tweet;
+};
+
+// Renders tweets that it receives from createTweetElement
+const renderTweets = function(tweets) {
+  $('.tweet-body').empty();
+  for (const tweet of tweets) {
+    const value = createTweetElement(tweet);
+    $('.tweet-body').prepend(value);
+  }
 };
 
 // Posts tweets using AJAX
@@ -60,7 +63,7 @@ const postTweets = () => {
   });
 };
 
-// Loads tweets suing AJAX
+// Loads tweets using AJAX
 const loadTweets = () => {
   $.ajax({
     url: "/tweets",
@@ -95,6 +98,7 @@ const checkSectionErrors = (section, html, delay, slideSpeed) => {
   return output;
 };
 
+// Document ready ensures all functions will only be called once the page has loaded
 $(document).ready(() => {
   postTweets();
   loadTweets();

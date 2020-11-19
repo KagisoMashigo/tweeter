@@ -11,6 +11,7 @@
   background-image: none;
   outline: none;
   transform: scale(1.05);
+  opacity: 1;
 }
 
 /* tweet article styling */

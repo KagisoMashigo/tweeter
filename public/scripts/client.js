@@ -77,7 +77,7 @@ const loadTweets = () => {
   }).catch(err => console.log(err));
 };
 
-// Function used to ensure scripts cannot be run by users
+// Function used to ensure scripts cannot be run by users remotely
 const escape =  function(string) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(string));

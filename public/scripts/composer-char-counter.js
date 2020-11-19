@@ -1,3 +1,4 @@
+// Character counter logic
 $("textarea").on("keyup", function() {
   const wordCount =  $(this).parent().find(".counter");
   wordCount.text((140 - $(this).val().length));

@@ -1,3 +1,4 @@
+/* Styling for form that contains tweet submission */
 .tweet-form {
   display: flex;
   display: none;
@@ -6,10 +7,12 @@
   margin: 20px;
 }
 
+/* textarea focus styling */
 .textarea:focus, input:focus{
   outline: none;
 }
 
+/* textarea styling */
 .textarea {
   display: flex;
   width: 100%;
@@ -20,6 +23,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }
 
+/* styling for the the container holding button and char counter */
 .button_counter {
   display: flex;
   justify-content: space-between;
@@ -27,11 +31,13 @@
   outline: none;
 }
 
+/* button hover styling */
 .button:hover {
-  border: 4px outset #17520d;
+  transform: scale(1.2);
   background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
 }
 
+/* button styling */
 .button {
   display: flex;
   color: #ffffff;
@@ -39,10 +45,9 @@
   border: none;
   background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
   cursor: pointer;
-
 }
 
+/* char counter styling */
 .counter {
   display: flex;
-
 }

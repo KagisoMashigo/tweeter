@@ -1,9 +1,9 @@
+/* Repsonsive design styling and break points */
 @media only screen and (max-width: 768px) {
   .nav {
     background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
   }
   body {
-
     font-size: 20px;
     background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
   }
@@ -22,7 +22,6 @@
   .nav {
     background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
     background-color: #17520d
-
   }
 
   #tweet {
@@ -36,11 +35,11 @@
   }
 
   .header {
-    width: 50%;
+    width: 150px;
+    height: 150px;
     margin: 50px;
     align-self: flex-start;
-    border-radius: 45px;
-
+    border-radius: 50%;
   }
 
   body {
@@ -57,6 +56,7 @@
   }
 }
 
+/* Styling for the header */
 .header {
   display: flex;
   height: 400px;

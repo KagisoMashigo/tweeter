@@ -11,7 +11,7 @@ const toggleForm = () => {
   });
 };
 
-// Creates tweet by injecting html into page
+// Creates tweet by injecting html article into container on page
 const createTweetElement = function(tweet) {
   let $tweet = `
   <article id="tweet">
@@ -46,7 +46,7 @@ const renderTweets = function(tweets) {
 const postTweets = () => {
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
-    if ($('.textarea').val().length > 140) {
+    if ($('.textarea').val().length >= 140) {
       checkSectionErrors('.errors', `<strong>⚠️ You've got too much character, friend. Reduce your character count ⚠️</strong>`, 2500, 'slow');
     } else if ($('.textarea').val().length === 0) {
       checkSectionErrors('.errors', `<strong>⚠️ You could use some more character. Add to your character count ⚠️</strong>`, 2500, 'slow');
@@ -81,20 +81,10 @@ const escape =  function(string) {
   return div.innerHTML;
 };
 
-// Formats date on new tweets
-const dateCheck = (timeStamp) => {
-  const date = new Date() - timeStamp;
-  let timeInSecs = Math.floor(date / 1000);
-  let timeInMins = Math.floor(timeInSecs / 60);
-  let timeInHours = Math.floor(timeInMins / 60);
-  let timeInDays = Math.floor(timeInHours / 24);
-  return timeInDays;
-};
-
 // Function made to check errors on form submission
-const checkSectionErrors = (section, html, delay, slideSpeed) => {
+const checkSectionErrors = (section, errMsgHtml, delay, slideSpeed) => {
   $(section).empty();
-  const output = $(section).append(html).slideDown(slideSpeed).delay(delay).slideUp(slideSpeed);
+  const output = $(section).append(errMsgHtml).slideDown(slideSpeed).delay(delay).slideUp(slideSpeed);
   return output;
 };
 

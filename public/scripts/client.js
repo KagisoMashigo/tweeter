@@ -49,9 +49,9 @@ const postTweets = () => {
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
     if ($('.textarea').val().length >= 140) {
-      checkSectionErrors('.errors', `<strong>⚠️ You've got too much character, friend. Reduce your character count ⚠️</strong>`, 2500, 'slow');
+      checkSectionErrors('.errors', `<strong>⚠️ You've got too much character, friend. Reduce your character count </strong>`, 2500, 'slow');
     } else if ($('.textarea').val().length === 0) {
-      checkSectionErrors('.errors', `<strong>⚠️ You could use some more character. Add to your character count ⚠️</strong>`, 2500, 'slow');
+      checkSectionErrors('.errors', `<strong>⚠️ You could use some more character. Add to your character count </strong>`, 2500, 'slow');
     } else {
       $.ajax({
         url: "/tweets",

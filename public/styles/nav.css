@@ -11,6 +11,8 @@
   top: 0;
   background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
   font-size: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Styling for dynamic arrow to toggle tweet */

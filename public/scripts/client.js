@@ -26,7 +26,9 @@ const createTweetElement = function(tweet) {
     <footer class="tweet-footer">
       <p2>${moment(tweet.created_at).fromNow()}</p2>
       <span>
-      <i class="fab fa-facebook-square"></i>
+      <i class="fas fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
       </span>
     </footer>
   </article>`;
@@ -57,6 +59,7 @@ const postTweets = () => {
         data: $(this).serialize()
       }).then(() => {
         $('.tweet-form').children('textarea').val('');
+        $('.counter').val(140)
         loadTweets();
       }).catch(err => console.log(err));
     }

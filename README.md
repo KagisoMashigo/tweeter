@@ -4,6 +4,18 @@ Hello there little hobbit! Tweeter is a simple, single-page Twitter clone.
 
 This particular iteration has been built by me, Kagiso, using HTML, CSS, JS, jQuery and AJAX along with Node, Express and MongoDB. The page itself is dynamic and will post tweets you create to the page itself and store them until you reset your server. There are 3 stock tweets to begin with.
 
+![desktop-form-toggle-up]()
+
+![desktop-form-toggle-down]()
+
+![desktop-tweet-posted]()
+
+![mobile-with-input]()
+
+![mobile-after-tweet]()
+
+![mobile-tweet-collection]()
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
@@ -19,6 +31,6 @@ This particular iteration has been built by me, Kagiso, using HTML, CSS, JS, jQu
 - chance
 - md5
 
-## Dev-Dependancies
+## Dev-Dependencies
 
 - nodemon

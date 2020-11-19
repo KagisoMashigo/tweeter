@@ -14,7 +14,7 @@ This particular iteration has been built by me, Kagiso, using HTML, CSS, JS, jQu
 
 !['Mobile after tweet'](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/mobile-after-tweet.png?raw=true)
 
-!['Mobile with view of tweet collection'](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/mobile-tweet-collection.png?raw=true 'Mobile with view of tweet collection')
+!['Mobile with view of tweet collection'](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/mobile-tweet-collection.png?raw=true "Mobile with view of tweet collection")
 
 ## Getting Started
 

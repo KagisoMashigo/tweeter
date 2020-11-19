@@ -1,14 +1,14 @@
 {
   "name": "tweeter",
   "version": "1.0.0",
-  "description": "A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end dev skillz",
+  "description": "A twitter clone, this particular iteration has been built by me, Kagiso, using HTML, CSS, JS, jQuery and AJAX along with Node, Express and MongoDB.",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
-  "author": "Lighthouse Labs",
+  "author": "Kagiso Mashigo",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",

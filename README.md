@@ -4,17 +4,17 @@ Hello there little hobbit! Tweeter is a simple, single-page Twitter clone.
 
 This particular iteration has been built by me, Kagiso, using HTML, CSS, JS, jQuery and AJAX along with Node, Express and MongoDB. The page itself is dynamic and will post tweets you create to the page itself and store them until you reset your server. There are 3 stock tweets to begin with.
 
-![desktop-form-toggle-up]()
+![desktop-form-toggle-up](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/desktop-form-toggle-up.png?raw=true)
 
-![desktop-form-toggle-down]()
+![desktop-form-toggle-down](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/desktop-form-toggle-down.png?raw=true)
 
-![desktop-tweet-posted]()
+![desktop-tweet-posted](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/desktop-tweet-posted.png?raw=true)
 
-![mobile-with-input]()
+![mobile-with-input](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/mobile-with-input.png?raw=true)
 
-![mobile-after-tweet]()
+![mobile-after-tweet](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/mobile-after-tweet.png?raw=true)
 
-![mobile-tweet-collection]()
+![mobile-tweet-collection](https://github.com/KagisoMashigo/tweeter/blob/master/public/images/screenshots/mobile-tweet-collection.png?raw=true)
 
 ## Getting Started
 

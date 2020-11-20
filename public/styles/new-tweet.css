@@ -17,7 +17,7 @@
 /* tweet article styling */
 #tweet {
   outline: solid #2c210e 4px;
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -52,16 +52,16 @@ const renderTweets = function(tweets) {
 const postTweets = () => {
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
-    if ($('.textarea').val().length >= 140) {
-      checkSectionErrors('.errors', `<strong>⚠️ Reduce your character count </strong>`, 750, 'slow');
+    if ($('.textarea').val().length > 140) {
+      checkSectionErrors('.errors', `<strong>⚠️ Reduce your character count </strong>`, 650, 'slow');
     } else if ($('.textarea').val().length === 0) {
-      checkSectionErrors('.errors', `<strong>⚠️ Add to your character count </strong>`, 750, 'slow');
+      checkSectionErrors('.errors', `<strong>⚠️ Add to your character count </strong>`, 650, 'slow');
     } else {
       $.ajax({
         url: "/tweets",
         method: "POST",
         data: $(this).serialize()
-      }).then(() => {
+      }).then((res) => {
         $('.tweet-form').children('textarea').val('');
         $('.counter').val(140)
         loadTweets();

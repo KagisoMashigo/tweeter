@@ -2,6 +2,8 @@
 @media only screen and (max-width: 768px) {
   .nav {
     background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+    font-size: large;
+    padding-bottom: 10px;
   }
   body {
     font-size: 20px;
@@ -10,6 +12,7 @@
   .errors {
     width: 90%;
   }
+
   section {
     display: flex;
     width: 95%;
@@ -38,8 +41,12 @@
     background-color: #17520d
   }
 
+  section {
+    font-size: larger;
+  }
+
   #tweet {
-    width: 60vh;
+    width: 100px;
     height: 30vh;
     color: #545149;
   }

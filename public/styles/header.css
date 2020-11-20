@@ -10,11 +10,25 @@
   .errors {
     width: 90%;
   }
+  section {
+    display: flex;
+    width: 95%;
+    height: 50%;
+    align-self: center;
+    font-size: larger;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .nav {
     background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png")
+  }
+  section {
+    display: flex;
+    width: 95%;
+    height: 50%;
+    align-self: center;
+    font-size: larger;
   }
 }
 

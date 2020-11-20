@@ -17,19 +17,20 @@
 /* tweet article styling */
 #tweet {
   outline: solid #2c210e 4px;
-  height: 25vh;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 95%;
-  padding: 10px;
+  padding: 5px;
   margin: 15px;
   overflow-wrap: break-word;
+  font-size: large;
 }
 
 /* tweet header styling */
 .tweet-header {
-  height: 33%;
+  height: 30%;
   background-color: #f4f1ec;
   display: flex;
   align-items: center;
@@ -57,29 +58,28 @@
 /* styling for the section in the tweet article */
 section {
   display: flex;
-  align-items: center;
-  width: 90%;
-  height: 33%;
+  width: 95%;
+  height: 50%;
   align-self: center;
 }
 
 /* styling for the p tag in the tweet article */
 p {
-  border-bottom: #2c210e 4px solid;
   width: 100%;
   height: 5vh;
+  display: flex;
+  overflow-wrap: anywhere
 }
 
 /* styling for the footer in the tweet article */
 footer {
-  font-size: 20px;
-  width: 90%;
+  font-size: 15px;
+  width: 95%;
   background-color: #f4f1ec;
-  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: center;
-  height: 33%;
+  height: 20%;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }

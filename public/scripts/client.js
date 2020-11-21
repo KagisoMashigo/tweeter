@@ -13,8 +13,6 @@ const toggleForm = () => {
   });
 };
 
-// error slide and render inefficiency
-
 // Creates tweet by injecting html article into container on page
 const createTweetElement = function(tweet) {
   let $tweet = `
